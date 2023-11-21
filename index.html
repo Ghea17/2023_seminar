@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+<div id="container">
+        <h2 id="clock">00 : 00 : 00</h2>
+        <form class="hidden" id="login-form" >
+            <input required maxlength = "15" type="text" placeholder="Name" />
+            <input type="submit" value="Log In"/>
+        </form> <!--input안에 있는 버튼또는type이 submit인 input 클릭하면
+        작성한 form이 submit이 됨(=사이트가새로고침됨)-->
+        <!--새로고침은 form submit의 기본동작-->
+
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input typd="text" placeholder="Write a To Do and Press Enter" required />
+        </form>
+
+        <ul id="todo-list">
+        </ul>
+
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <script src="js/greetings.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,205 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.6;
+    object-fit: cover;
+}
+
+
+#clock, #login-form, #todo-list, #weather {
+    max-width: 600px;
+}
+
+#clock {
+    margin-bottom: 20px;
+    font-size: 4em;
+    color: white;
+    opacity: 0.6;
+}
+
+#login-form {
+    margin-top: -5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-form input{
+    font-size: 10px;
+    color: white;
+    width: 135px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+#login-form input:focus {
+    border-bottom-color: white;
+    box-shadow: none;
+}
+
+#login-form input:focus::placeholder {
+    color: transparent;
+}
+
+
+#login-form input[type="submit"] {
+    position: relative;
+    border: none;
+    display: inline-block;
+    height: 30px;
+    font-size: 0.5em;
+    padding: 0 0.5em; /* 수정: 좌우 여백 조절 */
+    width: 80px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+#login-form input[type="submit"]:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+
+#login-form input[type="submit"]:before,
+#login-form input[type="submit"]:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1AAB8A;
+    transition: 200ms ease all;
+}
+
+#login-form input[type="submit"]:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#login-form input[type="submit"]:hover:before,
+#login-form input[type="submit"]:hover:after {
+    width: 100%;
+    transition: 400ms ease all;
+}
+
+#greeting {
+    font-size: 2.3em;
+    color: white;
+    font-weight: bold;
+    opacity: 0.7;
+    position: relative; /* 현재 위치 기준으로 이동시킬 것이므로 relative로 설정 */
+    top: -20px;
+}
+
+#todo-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    list-style: none; /* 목록 기호 제거 */
+    padding: 0; /* 목록의 내부 간격 제거 */
+}
+
+#todo-form input {
+    font-size: 10px;
+    color: white;
+    width: 230px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+    position: relative; /* 현재 위치 기준으로 이동시킬 것이므로 relative로 설정 */
+    top: -5px;
+}
+
+#todo-form input:focus {
+    border-bottom-color: white;
+    box-shadow: none;
+}
+
+#todo-form input:focus::placeholder {
+    color: transparent;
+}
+
+
+.todo-item {
+    background-color: #f0f0f0; /* 각 항목의 배경색 */
+    margin-bottom: 10px; /* 각 항목 간의 간격 */
+    padding: 10px; /* 각 항목의 안쪽 간격 */
+    border-radius: 5px; /* 둥근 테두리 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-item button {
+    outline: none;
+    color: white;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.todo-item button:hover {
+    background: #ff0000; /* ❌ 버튼에 호버 시 배경색 변경 */
+}
+
+#weather {
+    margin-top: 20px; /* 더 아래쪽으로 위치시키려면 값 증가 */
+    font-size: 0.6em; /* 더 작은 크기로 조정 */
+    color: #aaaaaa;
+    position: absolute;
+    bottom: 10px; /* 더 아래쪽으로 위치시키려면 값 증가 */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+}
+
+.hidden{
+    display: none;
+}
